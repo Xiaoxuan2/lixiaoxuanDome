@@ -33,7 +33,7 @@
         <el-menu-item-group>
           <el-menu-item index="2-1"  @click="submit6">•  供应商管理</el-menu-item>
           <el-menu-item index="2-2" @click="submit7">•  采购单</el-menu-item>
-          <el-menu-item index="2-3">•  采购退货单</el-menu-item>
+          <el-menu-item index="2-3"  @click="submit8">•  采购退货单</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
            <el-submenu index="3">
@@ -42,12 +42,12 @@
           <span>库存</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="3-1">•  商品入库</el-menu-item>
-          <el-menu-item index="3-2">•  库存调拨</el-menu-item>
-          <el-menu-item index="3-3">•  商品出库</el-menu-item>
-          <el-menu-item index="3-4">•  库存盘点</el-menu-item>
-          <el-menu-item index="3-5">•  商品库存</el-menu-item>
-          <el-menu-item index="3-6">•  商品库存明细</el-menu-item>
+          <el-menu-item index="3-1"   @click="submit9">•  商品入库</el-menu-item>
+          <el-menu-item index="3-2" @click="submit10">•  库存调拨</el-menu-item>
+          <el-menu-item index="3-3" @click="submit11">•  商品出库</el-menu-item>
+          <el-menu-item index="3-4"  @click="submit12">•  库存盘点</el-menu-item>
+          <el-menu-item index="3-5"  @click="submit13">•  商品库存</el-menu-item>
+          <el-menu-item index="3-6" @click="submit14">•  商品库存明细</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
            <el-submenu index="4">
@@ -56,8 +56,8 @@
           <span>促销</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="4-1">•  订单促销</el-menu-item>
-          <el-menu-item index="4-2">•  商品促销</el-menu-item>
+          <el-menu-item index="4-1" @click="submit15">•  订单促销</el-menu-item>
+          <el-menu-item index="4-2" @click="submit16">•  商品促销</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
            <el-submenu index="5">
@@ -96,6 +96,7 @@ export default {
   name:"left_nav",
      data(){
    return {
+
    }
  },
       methods: {
@@ -107,10 +108,11 @@ export default {
       }
       ,
      submit:function(){
-      this.$router.push({
+       this.$router.push({
          name: "Two", //跳转到指定name的页面
-        
-      })
+         
+      });
+      
      },
       submit1:function(){
       this.$router.push({
@@ -153,6 +155,51 @@ export default {
       submit7:function(){
       this.$router.push({
          name: "Nine", //跳转到指定name的页面
+      })
+     },
+     submit8:function(){
+      this.$router.push({
+         name: "Ten", //跳转到指定name的页面
+      })
+     },
+      submit9:function(){
+      this.$router.push({
+         name: "Eleven", //跳转到指定name的页面
+      })
+     },
+     submit10:function(){
+      this.$router.push({
+         name: "Twelve", //跳转到指定name的页面Thirteen
+      })
+     },
+      submit11:function(){
+      this.$router.push({
+         name: "Thirteen", //跳转到指定name的页面Thirteen
+      })
+     },
+     submit12:function(){
+      this.$router.push({
+         name: "Fourteen", //跳转到指定name的页面Thirteen
+      })
+     },
+      submit13:function(){
+      this.$router.push({
+         name: "Fifteen", //跳转到指定name的页面
+      })
+     },
+      submit14:function(){
+      this.$router.push({
+         name: "Sixteen", //跳转到指定name的页面Seventeen
+      })
+     },
+      submit15:function(){
+      this.$router.push({
+         name: "Seventeen", //跳转到指定name的页面Seventeen
+      })
+     },
+     submit16:function(){
+      this.$router.push({
+         name: "Eighteen", //跳转到指定name的页面Seventeen
       })
      }
     }

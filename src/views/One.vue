@@ -1,6 +1,8 @@
 <template>
+  
   <div id="subject_one">
-    
+    <Title></Title>
+   
    <div class="one">
         <ul>
           <li><img src="../assets/1.png" alt=""></li>
@@ -199,9 +201,12 @@
 
 <script>
 
-
+import Title from "../components/Title";
 export default {
-  name: "One"
+  name: "One",
+components: {
+        Title:Title
+  }
 };
 </script>
 <style scoped>
@@ -422,16 +427,21 @@ font-weight: bold;    padding: 0px 27px;
     border: 1px solid silver;
     float: right;
  }
- .el-badge__content {
-    background-color: red;
-    border-radius: 10px;
+.el-badge__content.is-fixed {
+    position: absolute;
+    top: 10px;
+    right: -2px!important;
+    transform: translateY(-47%) translateX(92%)!important;
+}
+.el-badge__content {
+    background-color: #F56C6C;
+    border-radius: 35px;
     color: #FFF;
     display: inline-block;
     font-size: 12px;
-    height: 18px;
-    line-height: 18px;
-    padding: 0px 6px;
-    margin: 8px -8px;
+    height: 16px!important;
+    line-height: 18px!important;
+    padding: 0px 6px!important;
     text-align: center;
     white-space: nowrap;
     border: 1px solid #FFF;

@@ -62,13 +62,58 @@ export default new Router({
             path: '/Nine',
             name: 'Nine',
             component: () => import('./views/Nine.vue')  
+          },
+          {
+            path: '/Ten',
+            name: 'Ten',
+            component: () => import('./views/Ten.vue')  
+          },
+          {
+            path: '/Eleven',
+            name: 'Eleven',
+            component: () => import('./views/Eleven.vue')  
+          },
+          {
+            path: '/Twelve',
+            name: 'Twelve',
+            component: () => import('./views/Twelve.vue')  
+          },
+          {
+            path: '/Thirteen',
+            name: 'Thirteen',
+            component: () => import('./views/Thirteen.vue')  
+          },
+          {
+            path: '/Fourteen',
+            name: 'Fourteen',
+            component: () => import('./views/Fourteen.vue')  
+          },
+          {
+            path: '/Fifteen',
+            name: 'Fifteen',
+            component: () => import('./views/Fifteen.vue')  
+          },
+          {
+            path: '/Sixteen',
+            name: 'Sixteen',
+            component: () => import('./views/Sixteen.vue')  
+          },
+            {
+            path: '/Seventeen',
+            name: 'Seventeen',
+            component: () => import('./views/Seventeen.vue')  
+          },
+          {
+            path: '/Eighteen',
+            name: 'Eighteen',
+            component: () => import('./views/Eighteen.vue')  
           }
         ]
         },
         {
           path:"/", //默认显示组件
           redirect:"/Comdtiy"
-          //重定向，页面默认显示One组件页面
+          //重定向，页面默认显示One组件页面Eighteen
         },
        
   ]

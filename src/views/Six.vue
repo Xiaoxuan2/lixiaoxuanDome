@@ -1,5 +1,6 @@
 <template>
     <div class="subject_three">
+         <Title lxx="商品编码设置"></Title>
         <div class="left">
                 <p><span>编码规则:</span><span>前缀+顺序号</span></p>
                 <p><span>*编码位数:</span>
@@ -62,8 +63,12 @@
     </div>
 </template>
 <script>
+import Title from "../components/Title";
 export default {
     name:"Six",
+     components: {
+        Title:Title
+  },
     data() {
         return {
               radio: '1',

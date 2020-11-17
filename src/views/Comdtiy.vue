@@ -3,8 +3,8 @@
 <template>
   <div class="Comdtiy">
     <Foltnav></Foltnav>
-    <leftnav  title="商品类别"></leftnav>
-    <Title></Title>
+    <leftnav></leftnav>
+    <!-- <Title></Title> -->
     <keep-alive>
       <router-view></router-view>
     </keep-alive>
@@ -13,7 +13,7 @@
 <script>
         import Foltnav from "../components/Folt_nav";
         import leftnav from "../components/left_nav";
-         import Title from "../components/Title";
+        import Title from "../components/Title";
 export default {
   name: "Comdtiy",
   components: {

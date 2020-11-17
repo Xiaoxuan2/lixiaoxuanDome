@@ -1,5 +1,6 @@
 <template>
     <div id="subject_Seven">
+        <Title lxx="图片库管理"></Title>
          <div style="margin-top: 15px; float:left">
   <el-input placeholder="请输入内容"
    class="input-with-select"
@@ -131,8 +132,13 @@
     </div>
 </template>
 <script>
+import Title from "../components/Title";
 export default {
+  
   name:"Seven",
+   components: {
+        Title:Title
+  },
    methods: {
       handleClick(row) {
         console.log(row);

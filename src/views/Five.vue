@@ -1,5 +1,6 @@
 <template>
   <div class="subject_two">
+     <Title lxx="商品档案"></Title>
     <div style="margin-top: 15px; float:left;width: 62%;">
      <el-dropdown>
   <span class="el-dropdown-link">
@@ -160,8 +161,12 @@
   </div>
 </template>
 <script>
+import Title from "../components/Title";
 export default {
   name:"Five",
+  components: {
+        Title:Title
+  },
    methods: {
          open() {
         this.$confirm('此操作将永久删除该文件, 是否继续?', '提示', {

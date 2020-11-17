@@ -1,31 +1,31 @@
 <template>
-  <div class="subject_Nine">
-    <Title lxx="采购单"></Title>
-    <div style="margin-top: 15px; float:left;width: 62%;     margin-bottom: 28px;">
+  <div class="subject_ten">
+     <Title lxx="采购退货单"></Title>
+    <div style="margin-top: 15px; float:left;width: 62%;">
      <el-dropdown>
   <span class="el-dropdown-link">
-    审核状态<i class="el-icon-arrow-down el-icon--right"></i>
+  审核状态<i class="el-icon-arrow-down el-icon--right"></i>
   </span>
   <el-dropdown-menu slot="dropdown">
     <el-dropdown-item>审核状态</el-dropdown-item>
     <el-dropdown-item>待审核</el-dropdown-item>
     <el-dropdown-item>审核失败</el-dropdown-item>
-   <el-dropdown-item>审核成功</el-dropdown-item>
-  
+  <el-dropdown-item>审核成功</el-dropdown-item>
   </el-dropdown-menu>
 </el-dropdown>
- <el-dropdown style="    margin-right: 57px;">
+ <el-dropdown>
   <span class="el-dropdown-link">
-    入库状态<i class="el-icon-arrow-down el-icon--right"></i>
+  出库状态<i class="el-icon-arrow-down el-icon--right"></i>
   </span>
   <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>入库状态</el-dropdown-item>
+    <el-dropdown-item>出库状态</el-dropdown-item>
     <el-dropdown-item>已作废</el-dropdown-item>
-    <el-dropdown-item>待入库</el-dropdown-item>
-   <el-dropdown-item>部分入库</el-dropdown-item>
-    <el-dropdown-item>已入库</el-dropdown-item>
+    <el-dropdown-item>待出库</el-dropdown-item>
+    <el-dropdown-item>部分出库</el-dropdown-item>
+     <el-dropdown-item>已出库</el-dropdown-item>
   </el-dropdown-menu>
 </el-dropdown>
+
 
 <el-dialog title="收货地址" :visible.sync="dialogTableVisible">
   <el-table :data="gridData">
@@ -34,17 +34,16 @@
     <el-table-column property="address" label="地址"></el-table-column>
   </el-table>
 </el-dialog>
-  <el-input placeholder="请输入内容"
+  <el-input placeholder="请输入采购单退货号"
    class="input-with-select"
-   style="width: 60%;">
+   style= "  width: 41%;left: 57px;">
     <el-button slot="append" icon="el-icon-search" @click="openFullScreen2"></el-button>
   </el-input>
 </div>
-  <div class="rgth" style="    margin: 14px 100px;">
+  <div class="rgth">
     <el-row>
        <el-button>导出</el-button>
-       <el-dropdown>
-</el-dropdown>
+      
    <el-button type="primary" @click="dialogFormVisible = true">新增</el-button>
 
 <el-dialog title="商品类别-新增/编辑" :visible.sync="dialogFormVisible">
@@ -75,8 +74,8 @@
       ref="multipleTable"
        tooltip-effect="dark"
     header-cell-style=" background-color:#F2F2F2;padding: -42px 0px;  text-align: center;"
-    cell-style="padding: 0px 0px;  text-align: center;"
-    style="width: 77.2%;padding: 0px 0px ;left: 89px;"
+    cell-style="padding:5px 0px;  text-align: center;"
+    style="width: 80.4%;padding: 5px 0px; left: 100px; top: 15px;"
     @selection-change="handleSelectionChange">
     ref="multipleTable"
     :data="tableData"
@@ -84,46 +83,42 @@
     style="width: 100%"
     @selection-change="handleSelectionChange">
     <el-table-column
-      type="selection"
-      width="55">
-    </el-table-column>
-    <el-table-column
-      label="编码"
-      width="120">
+      label="采购退货号"
+      width="130">
       <template slot-scope="scope">{{ scope.row.date }}</template>
     </el-table-column>
     <el-table-column
       prop="name"
-      label="称名"
-      width="200">
+      label="供应商"
+      width="130">
     </el-table-column>
     <el-table-column
       prop="address"
-      label="单位"
-       width="50"
+      label="退货金额"
+       width="80"
     >
     </el-table-column>
     <el-table-column
       prop="province"
-      label="类别"
-       width="70"
+      label="采购关联单号"
+       width="170"
     >
     </el-table-column>
     <el-table-column
       prop="zip"
-      label="最低销售价"
-       width="90"
+      label="制单人员"
+       width="80"
     >
     </el-table-column>
     <el-table-column
       prop="scmoney"
-      label="市场指导价"
+      label="制单日期"
        width="90"
     >
     </el-table-column>
     <el-table-column
       prop="cbmoney"
-      label="成本参考价"
+      label="审核状态"
        width="90"
     >
     </el-table-column>
@@ -131,8 +126,8 @@
       <el-table-column
         align="center"
          prop="zt"
-          label="状态"
-          width="50" >
+          label="出库状态"
+          width="80" >
     </el-table-column>
       <el-table-column
         align="center"
@@ -160,8 +155,8 @@
 <script>
 import Title from "../components/Title";
 export default {
-  name:"Nine",
-    components: {
+  name:"Ten",
+   components: {
         Title:Title
   },
    methods: {
@@ -220,101 +215,101 @@ export default {
         currentPage3: 5,
         currentPage4: 4,
         tableData: [{
-          date: '6210000000001',
-           name: '清风抽取式面巾纸150抽X2层',
-           address:'包',
-          province: '生活用品',
+          date: 'TH2018042810101',
+           name: '产品大神供应商',
+           address:'10000.00',
+          province: 'CG2018042810101',
           city: '8.00',
-          zip: '5.00',
-          scmoney:'18.00',
-          cbmoney:'3.00',
-           zt:'上架',
+          zip: 'syds',
+          scmoney:'2018-04-28',
+          cbmoney:'待审核',
+           zt:'待出库',
           
 
         },{
-          date: '6210000000001',
-        name: '清风抽取式面巾纸150抽X2层',
-          province: '生活用品',
-           city: '8.00',
-          address:'包',
-           zip: '5.00',
-          scmoney:'18.00',
-          cbmoney:'3.00',
-          zt:'上架'
-        },
-        {
-         date: '6210000000001',
-          name: '清风抽取式面巾纸150抽X2层',
-          address:'包',
-          province: '生活用品',
-           city: '8.00',
-          zip: '5.00',
-          scmoney:'18.00',
-          cbmoney:'3.00',
-           zt:'上架'
-        },{
-          date: '6210000000001',
-         name: '清风抽取式面巾纸150抽X2层',
-         address:'包',
-          province: '生活用品',
-           city: '8.00',
-           zip: '5.00',
-          scmoney:'18.00',
-          cbmoney:'3.00',
-           zt:'上架'
-        },{
-          date: '6210000000001',
-        name: '清风抽取式面巾纸150抽X2层',
-        address:'包',
-          province: '生活用品',
+         date: 'TH2018042810101',
+           name: '产品大神供应商',
+           address:'10000.00',
+          province: 'CG2018042810101',
           city: '8.00',
-          zip: '5.00',
-          scmoney:'18.00',
-          cbmoney:'3.00',
-           zt:'上架'
+          zip: 'syds',
+          scmoney:'2018-04-28',
+          cbmoney:'审核失败',
+           zt:'待出库',
         },
         {
-          date: '6210000000001',
-        name: '清风抽取式面巾纸150抽X2层',
-        address:'包',
-          province: '生活用品',
-            city: '8.00',
-            zip: '5.00',
-          scmoney:'18.00',
-          cbmoney:'3.00',
-           zt:'上架'
-        },
-        {
-          date: '6210000000001',
-          name: '清风抽取式面巾纸150抽X2层',
-          address:'包',
-          province: '生活用品',
+         date: 'TH2018042810101',
+           name: '产品大神供应商',
+           address:'10000.00',
+          province: 'CG2018042810101',
           city: '8.00',
-           zip: '5.00',
-          scmoney:'18.00',
-          cbmoney:'3.00',
-           zt:'上架'
-        },
-        {
-         date: '6210000000001',
-        name: '清风抽取式面巾纸150抽X2层',
-        address:'包',
-          province: '生活用品',
-          city: '8.00',
-            zip: '5.00',
-          scmoney:'18.00',
-          cbmoney:'3.00',
-           zt:'上架'
+          zip: 'syds',
+          scmoney:'2018-04-28',
+          cbmoney:'待审核',
+           zt:'待出库',
         },{
-          date: '6210000000001',
-          name: '清风抽取式面巾纸150抽X2层',
-          address:'包',
-          province: '生活用品',
-           city: '8.00',
-           zip: '5.00',
-          scmoney:'18.00',
-          cbmoney:'3.00',
-           zt:'上架'
+         date: 'TH2018042810101',
+           name: '产品大神供应商',
+           address:'10000.00',
+          province: 'CG2018042810101',
+          city: '8.00',
+          zip: 'syds',
+          scmoney:'2018-04-28',
+          cbmoney:'审核成功',
+           zt:'待出库',
+        },{
+          date: 'TH2018042810101',
+           name: '产品大神供应商',
+           address:'10000.00',
+          province: 'CG2018042810101',
+          city: '8.00',
+          zip: 'syds',
+          scmoney:'2018-04-28',
+          cbmoney:'审核成功',
+           zt:'待出库',
+        },
+        {
+         date: 'TH2018042810101',
+           name: '产品大神供应商',
+           address:'10000.00',
+          province: 'CG2018042810101',
+          city: '8.00',
+          zip: 'syds',
+          scmoney:'2018-04-28',
+          cbmoney:'审核成功',
+           zt:'待出库',
+        },
+        {
+          date: 'TH2018042810101',
+           name: '产品大神供应商',
+           address:'10000.00',
+          province: 'CG2018042810101',
+          city: '8.00',
+          zip: 'syds',
+          scmoney:'2018-04-28',
+          cbmoney:'待审核',
+           zt:'待出库',
+        },
+        {
+         date: 'TH2018042810101',
+           name: '产品大神供应商',
+           address:'10000.00',
+          province: 'CG2018042810101',
+          city: '8.00',
+          zip: 'syds',
+          scmoney:'2018-04-28',
+          cbmoney:'审核失败',
+           zt:'待出库',
+        },{
+         date: 'TH2018042810101',
+           name: '产品大神供应商',
+           address:'10000.00',
+          province: 'CG2018042810101',
+          city: '8.00',
+          zip: 'syds',
+          scmoney:'2018-04-28',
+          cbmoney:'待审核',
+           zt:'待出库',
         }]
         , multipleSelection: [],
         dialogTableVisible: false,
@@ -353,9 +348,9 @@ export default {
 }
 </script>
 <style scoped>
-  .subject_Nine{
+  .subject_ten{
             background: white;
-    /* height: 699px; */
+    height: 499px;
     width: 73%;
     margin: 103px 0px 0px 325px;
     padding: 9px 0px;
@@ -411,5 +406,13 @@ export default {
   .el-button {
     display: inline-block;
     line-height: 0;}
-
+   .el-table .cell:nth-of-type(2){
+            color: red!important;
+    }
+.el-pagination {
+    white-space: nowrap;
+    padding: 32px 5px;
+    color: #303133;
+    font-weight: 700;
+}
 </style>

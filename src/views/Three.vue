@@ -1,5 +1,6 @@
 <template>
   <div class="subject_two">
+     <Title lxx="商品品牌"></Title>
     <div style="margin-top: 15px; float:left">
   <el-input placeholder="请输入内容"
    class="input-with-select"
@@ -114,13 +115,17 @@
   </div>
   </div>
 </template>
-<script>
+<script>import Title from "../components/Title";
 export default {
   name:"Three",
+  components: {
+        Title:Title
+  },
    methods: {
       handleClick(row) {
         console.log(row);
       },
+
          open() {
         this.$confirm('此操作将永久删除该文件, 是否继续?', '提示', {
           confirmButtonText: '确定',

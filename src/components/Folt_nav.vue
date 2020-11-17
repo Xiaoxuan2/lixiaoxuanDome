@@ -3,7 +3,7 @@
     <el-row class="header">
       <el-col :span="24">
         <el-col :span="2" :offset="1" class="logo"></el-col>
-        <el-col :span="2" class="title">内容管理</el-col>   
+        <el-col :span="2" class="title" @click="submitOne">内容管理</el-col>   
         <el-col :span="1" class="title">系统设置</el-col>
         <el-button class="shanghu" @click.native="sh">商户账户管理</el-button>
         <div @mouseenter="mouseru" @mouseleave="mousechu">
@@ -73,7 +73,14 @@ export default {
       this.$router.push({
         path:"/shanghu"
       })
-    }
+    },submitOne:function(){
+       this.$router.push({
+         name: "One", //跳转到指定name的页面
+         
+      });
+      
+     },
+    
   },
 };
 </script>

@@ -1,5 +1,6 @@
 <template>
   <div class="subject_two">
+     <Title lxx="商品类别"></Title>
     <div style="margin-top: 15px; float:left">
   <el-input placeholder="请输入内容"
    class="input-with-select"
@@ -113,9 +114,12 @@
   </div>
   </div>
 </template>
-<script>
+<script>import Title from "../components/Title";
 export default {
   name:"Two",
+  components: {
+        Title:Title
+  },
    methods: {
       handleClick(row) {
         console.log(row);

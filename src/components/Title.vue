@@ -1,24 +1,22 @@
 <template>
     <div id="Title_nav">
-        <p><span></span>{{title}}</p>
+        <p><span></span>{{lxx}}</p>
     </div>
 </template>
 <script>
 export default {
-    
     name:'Title',
-//     data() {
-//     return {
-//       cz: this.$route.params.message
-//     };
-//   },
+    data() {
+    return {
+        
+    };
+  },
      props:{    //父向子传值 
-        title:{
+        lxx:{
             type:String,//传值 类型
             default:'首页'//默认显示值
-        
         }
-    },
+    }
 }
 </script>
 <style scoped>
@@ -29,6 +27,7 @@ export default {
     width: 100%;
        z-index: 8;
     top: 45px;
+        left: 0px;
  }
     #Title_nav p>span{
    width: 2px;
@@ -39,5 +38,7 @@ export default {
     }
      #Title_nav p{
        text-indent: 16em;
+       font-size: 15px;
+       font-weight: 700;
      }
 </style>
