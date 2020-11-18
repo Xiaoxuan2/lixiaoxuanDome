@@ -4,16 +4,18 @@
     <div style="margin-top: 15px; float:left">
   <el-input placeholder="请输入内容"
    class="input-with-select"
-   style="width: 60%;padding: 10px 35px;">
+   style="     margin-bottom: 25px;
+    padding-left: 169px;
+    width: 60%;">
     <el-button slot="append" icon="el-icon-search" @click="openFullScreen2"></el-button>
   </el-input>
 </div>
-  <div class="rgth">
+  <div class="rgth" style="    margin: 15px 139px;">
     <el-row>
        <el-button>导出</el-button>
    <el-button type="primary" @click="dialogFormVisible = true">新增</el-button>
 
-<el-dialog title="商品类别-新增/编辑" :visible.sync="dialogFormVisible">
+<el-dialog title="商品类别-新增/编辑" :visible.sync="dialogFormVisible" style="z-idnex:2001">
   <el-form :model="form">
     <el-form-item label="上级类别" :label-width="formLabelWidth">
       <el-input v-model="form.name" autocomplete="off"></el-input>
@@ -40,7 +42,7 @@
     border
     header-cell-style=" background-color:#F2F2F2;padding: 12px 0px"
      cell-style="padding: 0px 0px;  text-align: center;"
-    style="    width: 91.6%;padding: 0px 0px"
+    style="width: 73.4%;padding: 0px 0px"
     >
     <el-table-column
       prop="date"
@@ -79,7 +81,7 @@
 <el-dialog title="商品类别-新增/编辑" :visible.sync="dialogFormVisible">
   <el-form :model="form">
     <el-form-item label="上级类别" :label-width="formLabelWidth">
-      <el-input v-model="form.name" autocomplete="off"></el-input>
+      <el-input v-model="form.name" autocomplete="off" @input="e => name = validForbid (e)"></el-input>
     </el-form-item>
     <el-form-item label="*编号" :label-width="formLabelWidth">
       <el-input v-model="form.name" autocomplete="off"></el-input>
@@ -253,7 +255,7 @@ export default {
     padding: 9px 0px;
   }
   .el-table{
-      left: 36px;
+     left: 166px;
       text-align: center;
       font-size: 12px;
     
@@ -265,5 +267,8 @@ export default {
   .block{
         text-align: center;
         margin-top: 10px;
+  }
+  ::v-deep el-table{
+  left: 166px;
   }
 </style>

@@ -66,14 +66,14 @@
           <span>零售</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="5-1">•  终端销售单</el-menu-item>
-          <el-menu-item index="5-2">•  终端退货单</el-menu-item>
-          <el-menu-item index="5-3">•  商城销售单</el-menu-item>
-          <el-menu-item index="5-4">•  终端销售交易明细</el-menu-item>
-          <el-menu-item index="5-5">•  终端财务收银明细</el-menu-item>
-          <el-menu-item index="5-6">•  终端销售交易汇总</el-menu-item>
-          <el-menu-item index="5-7">•  终端财务收银汇总</el-menu-item>
-          <el-menu-item index="5-8">•  终端财务退款汇总</el-menu-item>
+          <el-menu-item index="5-1" @click="submit17">•  终端销售单</el-menu-item>
+          <el-menu-item index="5-2" @click="submit18">•  终端退货单</el-menu-item>
+          <el-menu-item index="5-3" @click="submit19">•  商城销售单</el-menu-item>
+          <el-menu-item index="5-4"  @click="submit20">•  终端销售交易明细</el-menu-item>
+          <el-menu-item index="5-5"   @click="submit21">•  终端财务收银明细</el-menu-item>
+          <el-menu-item index="5-6"  @click="submit22">•  终端销售交易汇总</el-menu-item>
+          <el-menu-item index="5-7"  @click="submit23">•  终端财务收银汇总</el-menu-item>
+          <el-menu-item index="5-8"  @click="submit24">•  终端财务退款汇总</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
         <el-submenu index="6">
@@ -82,8 +82,8 @@
           <span>会员</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="6-1">•  会员类别</el-menu-item>
-          <el-menu-item index="6-2">•  会员列表</el-menu-item>
+          <el-menu-item index="6-1"  @click="submit25">•  会员类别</el-menu-item>
+          <el-menu-item index="6-2" @click="submit26">•  会员列表</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
     </el-menu>
@@ -201,6 +201,56 @@ export default {
       this.$router.push({
          name: "Eighteen", //跳转到指定name的页面Seventeen
       })
+     },
+     submit17:function(){
+      this.$router.push({
+         name: "Nineteen", //跳转到指定name的页面
+      })
+     },
+      submit18:function(){
+      this.$router.push({
+         name: "Twenty", //跳转到指定name的页面Twenty
+      })
+     },
+      submit19:function(){
+      this.$router.push({
+         name: "TwentyOne", //跳转到指定name的页面Twenty
+      })
+     },
+      submit20:function(){
+      this.$router.push({
+         name: "TwentyTwo", //跳转到指定name的页面Twenty
+      })
+     },
+      submit21:function(){
+      this.$router.push({
+         name: "TwentyTree", //跳转到指定name的页面Twenty
+      })
+     },
+      submit22:function(){
+      this.$router.push({
+         name: "TwentFrou", //跳转到指定name的页面
+      })
+     },
+      submit23:function(){
+      this.$router.push({
+         name: "TwentyFive", //跳转到指定name的页面
+      })
+     },
+      submit24:function(){
+      this.$router.push({
+         name: "TwentySix", //跳转到指定name的页面TwentySix
+      })
+     },
+      submit25:function(){
+      this.$router.push({
+         name: "TwentySeven", //跳转到指定name的页面TwentySixTwentyEight
+      })
+     },
+      submit26:function(){
+      this.$router.push({
+         name: "TwentyEight", //跳转到指定name的页面TwentySix
+      })
      }
     }
   }
@@ -216,7 +266,7 @@ export default {
     left: 0;
     background-color: rgb(84, 92, 100);
     width: 170px;
-    height: 762px;
+      height: 965px;
     top: 44px;
 
 }

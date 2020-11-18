@@ -107,13 +107,78 @@ export default new Router({
             path: '/Eighteen',
             name: 'Eighteen',
             component: () => import('./views/Eighteen.vue')  
+          },
+          {
+            path: '/Nineteen',
+            name: 'Nineteen',
+            component: () => import('./views/Nineteen.vue')  
+          },
+          {
+            path: '/Twenty',
+            name: 'Twenty',
+            component: () => import('./views/Twenty.vue')  
+          },
+          {
+            path: '/TwentyOne',
+            name: 'TwentyOne',
+            component: () => import('./views/TwentyOne.vue')  
+          },
+          {
+            path: '/TwentyTwo',
+            name: 'TwentyTwo',
+            component: () => import('./views/TwentyTwo.vue')  
+          },
+          {
+            path: '/TwentyTree',
+            name: 'TwentyTree',
+            component: () => import('./views/TwentyTree.vue')  
+          },
+          {
+            path: '/TwentFrou',
+            name: 'TwentFrou',
+            component: () => import('./views/TwentFrou.vue')  
+          },
+          {
+            path: '/TwentyFive',
+            name: 'TwentyFive',
+            component: () => import('./views/TwentyFive.vue')  
+          },
+          {
+            path: '/TwentySix',
+            name: 'TwentySix',
+            component: () => import('./views/TwentySix.vue')  
+          },
+          {
+            path: '/TwentySeven',
+            name: 'TwentySeven',
+            component: () => import('./views/TwentySeven.vue')  
+          },
+          {
+            path: '/TwentyEight',
+            name: 'TwentyEight',
+            component: () => import('./views/TwentyEight.vue')  
+          },
+          {
+            path: '/TwentyNine',
+            name: 'TwentyNine',
+            component: () => import('./views/TwentyNine.vue')  
+          },
+          {
+            path: '/Thirty',
+            name: 'Thirty',
+            component: () => import('./views/Thirty.vue')  
+          },
+          {
+            path: '/ThirtyOne',
+            name: 'ThirtyOne',
+            component: () => import('./views/ThirtyOne.vue')  
           }
         ]
         },
         {
           path:"/", //默认显示组件
           redirect:"/Comdtiy"
-          //重定向，页面默认显示One组件页面Eighteen
+          //重定向，页面默认显示One组件页面
         },
        
   ]

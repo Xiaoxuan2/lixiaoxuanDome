@@ -4,11 +4,11 @@
     <div style="margin-top: 15px; float:left">
   <el-input placeholder="请输入内容"
    class="input-with-select"
-   style="width: 60%;padding: 10px 35px;">
+   style="   width: 38%;padding: 15px 168px;">
     <el-button slot="append" icon="el-icon-search" @click="openFullScreen2"></el-button>
   </el-input>
 </div>
-  <div class="rgth">
+  <div class="rgth" style="margin-right: 137px;margin-top: 25px;">
     <el-row>
    <el-button type="primary" @click="dialogFormVisible = true">新增</el-button>
 
@@ -40,7 +40,7 @@
     header-cell-style=" background-color:#F2F2F2;padding: 12px 0px"
       
      cell-style="padding: 0px 0px;  text-align: center;"
-    style="    width: 91.6%;padding: 0px 0px"
+    style="    width: 73.4%;padding: 0px 0px"
     >
     <el-table-column
       prop="date"
@@ -266,7 +266,7 @@ export default {
     padding: 9px 0px;
   }
   .el-table{
-      left: 36px;
+      left: 166px;
       text-align: center;
       font-size: 12px;
     
@@ -279,4 +279,12 @@ export default {
         text-align: center;
         margin-top: 10px;
   }
+  ::v-deep .input-with-select{
+      width: 38%;
+    padding: 15px 168px;
+}
+::v-deep .el-button el-button--primary{
+      margin-right: 119px;
+    margin-top: 5px;
+}
 </style>

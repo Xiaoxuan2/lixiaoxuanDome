@@ -75,7 +75,7 @@
        tooltip-effect="dark"
     header-cell-style=" background-color:#F2F2F2;padding: -42px 0px;  text-align: center;"
     cell-style="padding:5px 0px;  text-align: center;"
-    style="width: 80.4%;padding: 5px 0px; left: 100px; top: 15px;"
+    style="width:64.3%;padding: 0px 0px; left: 250px; top: 15px;"
     @selection-change="handleSelectionChange">
     ref="multipleTable"
     :data="tableData"

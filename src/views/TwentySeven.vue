@@ -1,19 +1,21 @@
 <template>
   <div class="subject_two">
-     <Title lxx="商品品牌"></Title>
+     <Title lxx="会员类别"></Title>
     <div style="margin-top: 15px; float:left">
   <el-input placeholder="请输入内容"
    class="input-with-select"
-   style="  width: 38%;padding: 15px 168px;">
+   style="     margin-bottom: 25px;
+    padding-left: 169px;
+    width: 60%;">
     <el-button slot="append" icon="el-icon-search" @click="openFullScreen2"></el-button>
   </el-input>
 </div>
-  <div class="rgth" style="margin-right: 137px;margin-top: 25px;">
+  <div class="rgth" style="    margin: 15px 139px;">
     <el-row>
        <el-button>导出</el-button>
    <el-button type="primary" @click="dialogFormVisible = true">新增</el-button>
 
-<el-dialog title="商品类别-新增/编辑" :visible.sync="dialogFormVisible">
+<el-dialog title="商品类别-新增/编辑" :visible.sync="dialogFormVisible" style="z-idnex:2001">
   <el-form :model="form">
     <el-form-item label="上级类别" :label-width="formLabelWidth">
       <el-input v-model="form.name" autocomplete="off"></el-input>
@@ -39,9 +41,8 @@
     :data="tableData"
     border
     header-cell-style=" background-color:#F2F2F2;padding: 12px 0px"
-   
      cell-style="padding: 0px 0px;  text-align: center;"
-    style="    width:  73.4%;padding: 0px 0px"
+    style="width: 73.4%;padding: 0px 0px"
     >
     <el-table-column
       prop="date"
@@ -117,7 +118,7 @@
 </template>
 <script>import Title from "../components/Title";
 export default {
-  name:"Three",
+  name:"TwentySeven",
   components: {
         Title:Title
   },
@@ -125,7 +126,6 @@ export default {
       handleClick(row) {
         console.log(row);
       },
-
          open() {
         this.$confirm('此操作将永久删除该文件, 是否继续?', '提示', {
           confirmButtonText: '确定',
@@ -142,7 +142,8 @@ export default {
             message: '已取消删除'
           });          
         });
-      },openFullScreen2() {
+      },
+       openFullScreen2() {
         const loading = this.$loading({
           lock: true,
           text: 'Loading',
@@ -152,6 +153,8 @@ export default {
         setTimeout(() => {
           loading.close();
         }, 2000);},
+      
+      
       handleSizeChange(val) {
         console.log(`每页 ${val} 条`);
       },
@@ -159,9 +162,10 @@ export default {
         console.log(`当前页: ${val}`);
       }
     },
+
     data() {
       return {
-           fullscreenLoading: false,
+         fullscreenLoading: false,
         currentPage1: 5,
         currentPage2: 5,
         currentPage3: 5,
@@ -251,7 +255,7 @@ export default {
     padding: 9px 0px;
   }
   .el-table{
-      left: 166px;
+     left: 166px;
       text-align: center;
       font-size: 12px;
     
@@ -263,5 +267,8 @@ export default {
   .block{
         text-align: center;
         margin-top: 10px;
+  }
+  ::v-deep el-table{
+  left: 166px;
   }
 </style>

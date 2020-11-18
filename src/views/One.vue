@@ -1,7 +1,7 @@
 <template>
   
   <div id="subject_one">
-    <Title></Title>
+    <Title lxx="首页"></Title>
    
    <div class="one">
         <ul>
@@ -15,7 +15,7 @@
     <div class="two">
        <div class="left">
           <p>待处理事务</p>
-          <ul>
+          <ul style="margin: 0px 48px;">
             <li> 
               <p>
               <el-badge :value="4" class="item">
@@ -47,7 +47,7 @@
        </div>
        <div class="rigth left">
            <p>快捷菜单</p>  <span>添加/设置</span>
-          <ul>
+          <ul style="margin: 0px 48px;">
             <li> 
               <p>
            
@@ -80,7 +80,7 @@
    </div>
         <div class="three">
             <p class="p">门店数据汇总</p>
-            <ul>
+            <ul style="margin: 0px 48px;">
             <li>
               <p><img src="../assets/2.png" alt=""></p>
               <p><img src="../assets/3.png" alt=""></p>  
@@ -274,6 +274,7 @@ components: {
  .three ul li{
    float: left;
     font-size: 12px;
+        padding: 0px 7px;
  }
   .three ul li p>img{
     width: 49%;
@@ -433,17 +434,18 @@ font-weight: bold;    padding: 0px 27px;
     right: -2px!important;
     transform: translateY(-47%) translateX(92%)!important;
 }
-.el-badge__content {
-    background-color: #F56C6C;
-    border-radius: 35px;
+::v-deep .el-badge__content {
+       background-color: #F56C6C;
+    border-radius: 10px;
     color: #FFF;
     display: inline-block;
     font-size: 12px;
-    height: 16px!important;
-    line-height: 18px!important;
-    padding: 0px 6px!important;
+    height: 15px;
+    line-height: 15px;
+    padding: 0px 5px;
     text-align: center;
     white-space: nowrap;
+    /* left: 29px; */
     border: 1px solid #FFF;
 }
 </style>

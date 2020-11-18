@@ -4,35 +4,16 @@
          <div style="margin-top: 15px; float:left">
   <el-input placeholder="请输入内容"
    class="input-with-select"
-   style="width: 60%;padding: 10px 35px;">
+  style="  width: 38%;padding: 15px 178px;">
     <el-button slot="append" icon="el-icon-search" @click="openFullScreen2"></el-button>
   </el-input>
 </div>
-  <div class="rgth">
+  <div class="rgth" style="margin-right: 190px;margin-top: 25px;">
     <el-row>
-       <el-button>导出</el-button>
-   <el-button type="primary" @click="dialogFormVisible = true">新增</el-button>
+       <el-button>导出</el-button> &nbsp;&nbsp; &nbsp;&nbsp;
+  <router-link to="/ThirtyOne"><el-button type="primary">新增</el-button></router-link> 
 
-<el-dialog title="商品类别-新增/编辑" :visible.sync="dialogFormVisible">
-  <el-form :model="form">
-    <el-form-item label="上级类别" :label-width="formLabelWidth">
-      <el-input v-model="form.name" autocomplete="off"></el-input>
-    </el-form-item>
-    <el-form-item label="*编号" :label-width="formLabelWidth">
-      <el-input v-model="form.name" autocomplete="off"></el-input>
-    </el-form-item>
-     <el-form-item label="*名称" :label-width="formLabelWidth">
-      <el-input v-model="form.name" autocomplete="off"></el-input>
-    </el-form-item>
-     <el-form-item label="排序" :label-width="formLabelWidth">
-      <el-input v-model="form.name" autocomplete="off"></el-input>
-    </el-form-item>
-  </el-form>
-  <div slot="footer" class="dialog-footer">
-    <el-button @click="dialogFormVisible = false">取 消</el-button>
-    <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
-  </div>
-</el-dialog>
+
   </el-row>
   </div>
     <el-table
@@ -40,7 +21,7 @@
     border
     header-cell-style=" background-color:#F2F2F2;padding: 12px 0px"
      cell-style="padding: 0px 0px;  text-align: center;"
-    style="    width: 91.6%;padding: 0px 0px"
+    style="    width: 73.2%;padding: 0px 0px"
     >
     <el-table-column
       prop="date"
@@ -290,7 +271,7 @@ export default {
 
 }
 .el-table{
-      left: 36px;
+      left: 173px;
       text-align: center;
       font-size: 12px;
     

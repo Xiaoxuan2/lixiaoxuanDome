@@ -1,62 +1,30 @@
 <template>
   <div class="subject_Eighteen">
-    <Title lxx="商品促销"></Title>
-    <div style="margin-top: 15px; float:left;width: 62%;">
+    <Title lxx="终端销售交易汇总"></Title>
+    <div style="    margin-top: 15px; float: left;width: 62%; margin-left: 212px;">
       <el-dropdown>
         <span class="el-dropdown-link">
-          促销状态
+          按日总汇
           <i class="el-icon-arrow-down el-icon--right"></i>
         </span>
         <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item>促销状态</el-dropdown-item>
-          <el-dropdown-item>待促销</el-dropdown-item>
-          <el-dropdown-item>促销中</el-dropdown-item>
-          <el-dropdown-item>已暂停</el-dropdown-item>
-          <el-dropdown-item>已结束</el-dropdown-item>
+          <el-dropdown-item>按日总汇</el-dropdown-item>
+          <el-dropdown-item>按月总汇</el-dropdown-item>
+          <el-dropdown-item>按年总汇</el-dropdown-item>
+         
         </el-dropdown-menu>
       </el-dropdown>
 
       <!--  -->
-      <el-input placeholder="请输入采购单退货号" class="input-with-select" style="  width: 41%;left: 57px;">
+      <el-input placeholder="请输入门店名称/编码" class="input-with-select" style="width: 31%;padding: 0px 0px 0px 50px;">
         <el-button slot="append" icon="el-icon-search" @click="openFullScreen2"></el-button>
       </el-input>
-      <el-button type="text" @click="dialogFormVisible = true">高级搜素</el-button>
+  
 
-      <el-dialog title="高级搜索" :visible.sync="dialogFormVisible">
-        <el-form :model="form" id="input_OO">
-            <div class="input_left">
-                <p><label for="">促销编码:</label><input type="text" placeholder="请输入促销编码"></p>
-                <p><label for="">促销门店</label> <select name="" id=""><option value="">产品大神（幸福店）</option></select></p>
-                <p><label for="">制单日期</label> <input type="text"></p>
-                <p><label for="">制单人员</label> <select name="" id=""><option value="">陈龙</option></select></p>
-                <p><label for="">审核状态</label> 
-                    <el-checkbox-group v-model="checkedCities" :min="1" :max="4">
-                         <el-checkbox v-for="city in cities" :label="city" :key="city">{{city}}</el-checkbox>
-                    </el-checkbox-group>
-                </p>
-            </div>
-          <div class="input_rigth input_left">
-                <p><label for="">经办人员:</label><input type="text" placeholder="请输入经办人员"></p>
-                <p><label for="">促销日期</label> <select name="" id=""><option value="">产品大神（幸福店）</option></select></p>
-                  <p><label for="">审核日期</label> <select name="" id=""><option value="">产品大神（幸福店）</option></select></p>
-                <p><label for="">制单人员</label> <select name="" id=""><option value="">陈龙</option></select></p>
-                <p><label for="">审核状态</label> 
-                    <el-checkbox-group v-model="checkedCities" :min="1" :max="4">
-                         <el-checkbox v-for="city in cities" :label="city" :key="city">{{city}}</el-checkbox>
-                    </el-checkbox-group>
-                </p>
-            </div>
-        </el-form>
-        <div slot="footer" class="dialog-footer">
-          <el-button @click="dialogFormVisible = false">取 消</el-button>
-          <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
-        </div>
-      </el-dialog>
     </div>
-    <div class="rgth">
+    <div class="rgth" style="padding: 0px 0px 0px 50px;">
       <el-row>
         <el-button>导出</el-button>
-        <el-button type="primary">新增</el-button>
       </el-row>
     </div>
     <el-table
@@ -74,15 +42,15 @@
       tooltip-effect="dark"
       style="width: 100%"
       @selection-change="handleSelectionChange">
-      <el-table-column label="促销编码" width="130">
+      <el-table-column label="日期" width="130">
         <template slot-scope="scope">{{ scope.row.date }}</template>
       </el-table-column>
-      <el-table-column prop="name" label="促销门店" width="130"></el-table-column>
-      <el-table-column prop="address" label="促销日期" width="180"></el-table-column>
-      <el-table-column prop="province" label="制单人员" width="70"></el-table-column>
-      <el-table-column prop="zip" label="审核日期" width="100"></el-table-column>
-      <el-table-column prop="scmoney" label="审核状态" width="90"></el-table-column>
-      <el-table-column prop="cbmoney" label="促销状态" width="90"></el-table-column>
+      <el-table-column prop="name" label="门店名称" width="130"></el-table-column>
+      <el-table-column prop="address" label="商品名称" width="180"></el-table-column>
+      <el-table-column prop="province" label="销售数量" width="70"></el-table-column>
+      <el-table-column prop="zip" label="销售金额" width="100"></el-table-column>
+      <el-table-column prop="scmoney" label="退款数量" width="90"></el-table-column>
+      <el-table-column prop="cbmoney" label="数量小计" width="90"></el-table-column>
 
       <el-table-column align="center" prop="imgg" width="50">
         <el-tooltip placement="bottom">
@@ -113,7 +81,7 @@
 import Title from "../components/Title";
 const cityOptions = ['全部', '待审核', '审核成功', '审核失败']; 
 export default {
-  name: "Eighteen",
+  name: "TwentFrou",
   components: {
     Title: Title
   },

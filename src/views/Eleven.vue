@@ -43,29 +43,10 @@
   <div class="rgth">
     <el-row>
        <el-button>导出</el-button>
-      
-   <el-button type="primary" @click="dialogFormVisible = true">新增</el-button>
+       &nbsp;&nbsp; &nbsp;&nbsp; 
+  <router-link><el-button type="primary">新增</el-button></router-link> 
 
-<el-dialog title="商品类别-新增/编辑" :visible.sync="dialogFormVisible">
-  <el-form :model="form">
-    <el-form-item label="上级类别" :label-width="formLabelWidth">
-      <el-input v-model="form.name" autocomplete="off"></el-input>
-    </el-form-item>
-    <el-form-item label="*编号" :label-width="formLabelWidth">
-      <el-input v-model="form.name" autocomplete="off"></el-input>
-    </el-form-item>
-     <el-form-item label="*名称" :label-width="formLabelWidth">
-      <el-input v-model="form.name" autocomplete="off"></el-input>
-    </el-form-item>
-     <el-form-item label="排序" :label-width="formLabelWidth">
-      <el-input v-model="form.name" autocomplete="off"></el-input>
-    </el-form-item>
-  </el-form>
-  <div slot="footer" class="dialog-footer">
-    <el-button @click="dialogFormVisible = false">取 消</el-button>
-    <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
-  </div>
-</el-dialog>
+
   </el-row>
   </div>
     <el-table
@@ -75,7 +56,7 @@
        tooltip-effect="dark"
     header-cell-style=" background-color:#F2F2F2;padding: -32px 0px;  text-align: center;"
     cell-style="padding: 10px 0px;  text-align: center;"
-    style="width: 71.4%;padding: 0px 0px; left: 100px; top: 15px;"
+    style="width: 57.2%;padding: 0px;left: 250px;top: 24px"
     @selection-change="handleSelectionChange">
     ref="multipleTable"
     :data="tableData"
@@ -312,18 +293,7 @@ export default {
            zt:'待出库',
         }]
         , multipleSelection: [],
-        dialogTableVisible: false,
-        dialogFormVisible: false,
-        form: {
-          name: '',
-          region: '',
-          date1: '',
-          date2: '',
-          delivery: false,
-          type: [],
-          resource: '',
-          desc: ''
-        },
+      
            gridData: [{
           date: '2016-05-02',
           name: '王小虎',
@@ -341,7 +311,7 @@ export default {
           name: '王小虎',
           address: '上海市普陀区金沙江路 1518 弄'
         }],
-        formLabelWidth: '120px',
+     
         
       }
     }
