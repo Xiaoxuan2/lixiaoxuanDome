@@ -417,7 +417,7 @@ font-weight: bold;    padding: 0px 27px;
    
  }
  .seven .seven_left{
- width: 49%;
+    width: 49%;
     height: 100%;
     border: 1px solid silver;
     float: left;

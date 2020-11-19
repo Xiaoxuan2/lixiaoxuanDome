@@ -1,7 +1,11 @@
 <template>
   <div class="subject_Sixteen">
       <Title lxx="商品库存明细"></Title>
-    <div style="margin-top: 15px; float:left;width: 62%;">
+    <div style="margin-top: 15px;
+    float: left;
+    width: 40%;
+    margin-left: 176px;"
+>
      <el-dropdown>
   <span class="el-dropdown-link">
   出入库<i class="el-icon-arrow-down el-icon--right"></i>
@@ -357,8 +361,9 @@ export default {
     
   }
   .rgth{
-    float:right;
-    margin:12px 30px;
+    
+    margin: 24px 0px 0px 1182px;
+
   }
   .block{
         text-align: center;

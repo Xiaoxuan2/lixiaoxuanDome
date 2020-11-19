@@ -1,7 +1,10 @@
 <template>
   <div class="subject_ten">
      <Title lxx="商品档案"></Title>
-    <div style="margin-top: 15px; float:left;width: 62%;">
+    <div style="margin-top: 15px;
+    float: left;
+    width: 40%;
+    margin-left: 207px;">
      <el-dropdown>
   <span class="el-dropdown-link">
   审核状态<i class="el-icon-arrow-down el-icon--right"></i>
@@ -316,8 +319,7 @@ export default {
     
   }
   .rgth{
-    float:right;
-    margin:12px 30px;
+        margin: 24px 0px 0px 980px;
   }
   .block{
         text-align: center;

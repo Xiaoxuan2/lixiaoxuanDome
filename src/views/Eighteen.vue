@@ -1,7 +1,10 @@
 <template>
   <div class="subject_Eighteen">
     <Title lxx="商品促销"></Title>
-    <div style="margin-top: 15px; float:left;width: 62%;">
+    <div style="margin-top: 15px;
+    float: left;
+    width: 40%;
+    margin-left: 207px;">
       <el-dropdown>
         <span class="el-dropdown-link">
           促销状态
@@ -56,7 +59,9 @@
     <div class="rgth">
       <el-row>
         <el-button>导出</el-button>
-        <el-button type="primary">新增</el-button>
+        &nbsp;  &nbsp;  &nbsp;
+     
+        <router-link to="/ThirtyNine"><el-button type="primary">新增</el-button></router-link>
       </el-row>
     </div>
     <el-table
@@ -323,8 +328,7 @@ export default {
   font-size: 12px;
 }
 .rgth {
-  float: right;
-  margin: 12px 30px;
+   margin: 24px 0px 0px 917px;
 }
 .block {
   text-align: center;
@@ -389,15 +393,22 @@ export default {
 float: right;
 }
 ::v-deep .input_left>p{
-  height: 30px;
+  height: 49px;
 }
 ::v-deep .input_left>p>label{
   padding: 0px 10px;
 }
 ::v-deep .input_left>p>input{
-      height: 17px;
+      height: 26px;
 }
 ::v-deep .input_left>p>select{
-      height: 17px;
+      height: 32px;
+      width: 175px;
+}
+::v-deep .el-button--text{
+    color: #409eff;
+    background: 0 0;
+    padding-left: 91px;
+    padding-right: 4px;
 }
 </style>

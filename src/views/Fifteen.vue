@@ -1,7 +1,11 @@
 <template>
   <div class="subject_Fifteen">
       <Title lxx="商品库存"></Title>
-    <div style="margin-top: 15px; float:left;width: 62%;">
+    <div style="margin-top: 15px;
+    float: left;
+    width: 40%;
+    margin-left: 179px;"
+>
      <el-dropdown>
   <span class="el-dropdown-link">
   全部状态<i class="el-icon-arrow-down el-icon--right"></i>
@@ -44,28 +48,7 @@
     <el-row>
        <el-button>导出</el-button>
       
-   <el-button type="primary" @click="dialogFormVisible = true">新增</el-button>
 
-<el-dialog title="商品类别-新增/编辑" :visible.sync="dialogFormVisible">
-  <el-form :model="form">
-    <el-form-item label="上级类别" :label-width="formLabelWidth">
-      <el-input v-model="form.name" autocomplete="off"></el-input>
-    </el-form-item>
-    <el-form-item label="*编号" :label-width="formLabelWidth">
-      <el-input v-model="form.name" autocomplete="off"></el-input>
-    </el-form-item>
-     <el-form-item label="*名称" :label-width="formLabelWidth">
-      <el-input v-model="form.name" autocomplete="off"></el-input>
-    </el-form-item>
-     <el-form-item label="排序" :label-width="formLabelWidth">
-      <el-input v-model="form.name" autocomplete="off"></el-input>
-    </el-form-item>
-  </el-form>
-  <div slot="footer" class="dialog-footer">
-    <el-button @click="dialogFormVisible = false">取 消</el-button>
-    <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
-  </div>
-</el-dialog>
   </el-row>
   </div>
     <el-table
@@ -380,8 +363,7 @@ export default {
     
   }
   .rgth{
-    float:right;
-    margin:12px 30px;
+          margin: 24px 0px 0px 1105px;
   }
   .block{
         text-align: center;

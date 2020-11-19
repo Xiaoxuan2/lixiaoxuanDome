@@ -94,7 +94,7 @@
       <el-radio label="卖家包邮"></el-radio>
       
     </el-radio-group>
-   <el-select v-model="form.region" placeholder="请选择运费模板" style="width: 100%;">
+   <el-select v-model="form.region" placeholder="请选择运费模板" style="">
       <el-option label="双十一运费模板" value="1"></el-option>
       <el-option label="双十一运费模板" value="2"></el-option>
        <el-option label="双十一运费模板" value="3"></el-option>

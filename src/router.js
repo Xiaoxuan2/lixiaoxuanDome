@@ -8,7 +8,6 @@ export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
-   
     {
       path: '/Comdtiy',
       name: 'Comdtiy',
@@ -172,6 +171,56 @@ export default new Router({
             path: '/ThirtyOne',
             name: 'ThirtyOne',
             component: () => import('./views/ThirtyOne.vue')  
+          },
+          {
+            path: '/ThirtyTwo',
+            name: 'ThirtyTwo',
+            component: () => import('./views/ThirtyTwo.vue')  
+          },
+          {
+            path: '/ThirtyThree',
+            name: 'ThirtyThree',
+            component: () => import('./views/ThirtyThree.vue')  
+          },
+          {
+            path: '/ThirtyFour',
+            name: 'ThirtyFour',
+            component: () => import('./views/ThirtyFour.vue')  
+          },
+          {
+            path: '/ThirtyFive',
+            name: 'ThirtyFive',
+            component: () => import('./views/ThirtyFive.vue')  
+          },
+          {
+            path: '/ThirtytSix',
+            name: 'ThirtytSix',
+            component: () => import('./views/ThirtytSix.vue')  
+          },
+          {
+            path: '/ThirytSeven',
+            name: 'ThirytSeven',
+            component: () => import('./views/ThirytSeven.vue')  
+          },
+          {
+            path: '/ThirtyEight',
+            name: 'ThirtyEight',
+            component: () => import('./views/ThirtyEight.vue')  
+          },
+          {
+            path: '/ThirtyNine',
+            name: 'ThirtyNine',
+            component: () => import('./views/ThirtyNine.vue')  
+          },
+          {
+            path: '/Forty',
+            name: 'Forty',
+            component: () => import('./views/Forty.vue')  
+          },
+          {
+            path: '/FortyOne',
+            name: 'FortyOne',
+            component: () => import('./views/FortyOne.vue')  
           }
         ]
         },

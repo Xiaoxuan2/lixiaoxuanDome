@@ -13,28 +13,9 @@
   <div class="rgth" style="    margin: 15px 139px;">
     <el-row>
        <el-button>导出</el-button>
-   <el-button type="primary" @click="dialogFormVisible = true">新增</el-button>
+        &nbsp;&nbsp;&nbsp;
+<router-link to="/Forty"> <el-button type="primary">新增</el-button></router-link>
 
-<el-dialog title="商品类别-新增/编辑" :visible.sync="dialogFormVisible" style="z-idnex:2001">
-  <el-form :model="form">
-    <el-form-item label="上级类别" :label-width="formLabelWidth">
-      <el-input v-model="form.name" autocomplete="off"></el-input>
-    </el-form-item>
-    <el-form-item label="*编号" :label-width="formLabelWidth">
-      <el-input v-model="form.name" autocomplete="off"></el-input>
-    </el-form-item>
-     <el-form-item label="*名称" :label-width="formLabelWidth">
-      <el-input v-model="form.name" autocomplete="off"></el-input>
-    </el-form-item>
-     <el-form-item label="排序" :label-width="formLabelWidth">
-      <el-input v-model="form.name" autocomplete="off"></el-input>
-    </el-form-item>
-  </el-form>
-  <div slot="footer" class="dialog-footer">
-    <el-button @click="dialogFormVisible = false">取 消</el-button>
-    <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
-  </div>
-</el-dialog>
   </el-row>
   </div>
     <el-table

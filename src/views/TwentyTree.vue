@@ -384,15 +384,16 @@ export default {
 float: right;
 }
 ::v-deep .input_left>p{
-  height: 30px;
+  height: 49px;
 }
 ::v-deep .input_left>p>label{
   padding: 0px 10px;
 }
 ::v-deep .input_left>p>input{
-      height: 17px;
+      height: 26px;
 }
 ::v-deep .input_left>p>select{
-      height: 17px;
+      height: 32px;
+      width: 175px;
 }
 </style>

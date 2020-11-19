@@ -2,7 +2,10 @@
 <template>
   <div class="subject_Eighteen">
     <Title lxx="终端财务收银汇总"></Title>
-    <div style="margin-top: 15px; float:left;width: 62%;">
+    <div style="margin-top: 15px;
+    float: left;
+    width: 40%;
+    margin-left: 93px;">
       <el-dropdown>
         <span class="el-dropdown-link">
           按日总汇
@@ -307,8 +310,7 @@ export default {
   font-size: 12px;
 }
 .rgth {
-  float: right;
-  margin: 12px 30px;
+       margin: 24px 0px 0px 1208px
 }
 .block {
   text-align: center;

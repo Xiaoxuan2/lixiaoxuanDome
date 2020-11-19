@@ -1,7 +1,11 @@
 <template>
   <div class="subject_eleven">
       <Title lxx="商品入库"></Title>
-    <div style="margin-top: 15px; float:left;width: 62%;">
+    <div style="margin-top: 15px;
+    float: left;
+    width: 40%;
+    margin-left: 207px;"
+>
      <el-dropdown>
   <span class="el-dropdown-link">
   审核状态<i class="el-icon-arrow-down el-icon--right"></i>
@@ -44,7 +48,7 @@
     <el-row>
        <el-button>导出</el-button>
        &nbsp;&nbsp; &nbsp;&nbsp; 
-  <router-link><el-button type="primary">新增</el-button></router-link> 
+  <router-link to="/ThirtyFour"><el-button type="primary">新增</el-button></router-link> 
 
 
   </el-row>
@@ -332,8 +336,7 @@ export default {
     
   }
   .rgth{
-    float:right;
-    margin:12px 30px;
+     margin: 24px 0px 0px 877px;
   }
   .block{
         text-align: center;

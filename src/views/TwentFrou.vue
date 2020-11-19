@@ -22,7 +22,7 @@
   
 
     </div>
-    <div class="rgth" style="padding: 0px 0px 0px 50px;">
+    <div class="rgth">
       <el-row>
         <el-button>导出</el-button>
       </el-row>
@@ -291,8 +291,8 @@ export default {
   font-size: 12px;
 }
 .rgth {
-  float: right;
-  margin: 12px 30px;
+          margin: 24px 0px 0px 1019px;
+    position: absolute;
 }
 .block {
   text-align: center;

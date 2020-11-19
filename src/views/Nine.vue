@@ -1,7 +1,10 @@
 <template>
   <div class="subject_Nine">
     <Title lxx="采购单"></Title>
-    <div style="margin-top: 15px; float:left;width: 62%;     margin-bottom: 28px;">
+    <div style="margin-top: 15px;
+    float: left;
+    width: 40%;
+    margin-left: 207px;">
      <el-dropdown>
   <span class="el-dropdown-link">
     审核状态<i class="el-icon-arrow-down el-icon--right"></i>
@@ -40,33 +43,11 @@
     <el-button slot="append" icon="el-icon-search" @click="openFullScreen2"></el-button>
   </el-input>
 </div>
-  <div class="rgth" style="    margin: 14px 100px;">
+  <div class="rgth">
     <el-row>
        <el-button>导出</el-button>
-       <el-dropdown>
-</el-dropdown>
-   <el-button type="primary" @click="dialogFormVisible = true">新增</el-button>
-
-<el-dialog title="商品类别-新增/编辑" :visible.sync="dialogFormVisible">
-  <el-form :model="form">
-    <el-form-item label="上级类别" :label-width="formLabelWidth">
-      <el-input v-model="form.name" autocomplete="off"></el-input>
-    </el-form-item>
-    <el-form-item label="*编号" :label-width="formLabelWidth">
-      <el-input v-model="form.name" autocomplete="off"></el-input>
-    </el-form-item>
-     <el-form-item label="*名称" :label-width="formLabelWidth">
-      <el-input v-model="form.name" autocomplete="off"></el-input>
-    </el-form-item>
-     <el-form-item label="排序" :label-width="formLabelWidth">
-      <el-input v-model="form.name" autocomplete="off"></el-input>
-    </el-form-item>
-  </el-form>
-  <div slot="footer" class="dialog-footer">
-    <el-button @click="dialogFormVisible = false">取 消</el-button>
-    <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
-  </div>
-</el-dialog>
+     &nbsp;  &nbsp;  &nbsp;
+       <router-link to="/ThirtyTwo"><el-button type="primary">新增</el-button></router-link>
   </el-row>
   </div>
     <el-table
@@ -367,8 +348,7 @@ export default {
     
   }
   .rgth{
-    float:right;
-    margin:12px 30px;
+       margin: 20px 3px 23px 941px;
   }
   .block{
         text-align: center;
